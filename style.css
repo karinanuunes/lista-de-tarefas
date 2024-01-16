@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -17,10 +18,6 @@ body {
 input,
 button {
   font-family: "Roboto Mono", monospace;
-}
-
-#addTarefa {
-  text-align: center;
 }
 
 #lista {
@@ -47,11 +44,7 @@ button {
   margin-left: 5px;
   padding: 5px 10px;
   border-radius: 20px;
-  border: 1px solid #8ca1dd;
-}
-
-#botao {
-  font-weight: 600;
+  border: 1px solid #c2d1fc;
 }
 
 #tarefa {
@@ -84,23 +77,15 @@ ul {
 
 .azul {
   color: #2b5ce2;
-  text-decoration: none;
 }
 
-@media (max-width: 700px) {
-  #lista {
-    margin: 50px 0 0 50px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   #lista {
     margin: 50px 0 0 50px;
   }
 
   #addTarefa {
     width: 350px;
-    text-align: left;
   }
 
   #tarefa,
