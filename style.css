@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #2b5ce2;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+}
+
+input,
+button {
+  font-family: "Roboto Mono", monospace;
+}
+
+#addTarefa {
+  text-align: center;
+}
+
+#lista {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px 0 0 100px;
+  gap: 20px;
+  height: 100vh;
+}
+
+#tarefas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+  gap: 10px;
+}
+
+#botao,
+#concluir,
+#tarefa {
+  background-color: #f9fafd;
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #8ca1dd;
+}
+
+#botao {
+  font-weight: 600;
+}
+
+#tarefa {
+  width: 310px;
+  margin: 0;
+}
+
+#tarefa::placeholder {
+  color: #8ca1dd;
+}
+
+#tarefa:focus {
+  outline: 1px solid #2b5ce2;
+}
+
+#concluir {
+  font-size: 9px;
+  border: none;
+  padding: 2px 5px;
+}
+
+ul {
+  display: flex;
+}
+
+.roxo {
+  color: #ca74ca;
+  text-decoration: line-through;
+}
+
+.azul {
+  color: #2b5ce2;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  #lista {
+    margin: 50px 0 0 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  #lista {
+    margin: 50px 0 0 50px;
+  }
+
+  #addTarefa {
+    width: 350px;
+    text-align: left;
+  }
+
+  #tarefa,
+  #botao {
+    margin: 0;
+    margin-top: 10px;
+  }
+}
