@@ -5,14 +5,13 @@ function adicionarTarefa() {
   if (tarefa.trim() !== "") {
     listaTarefas.push(tarefa);
 
-    criarLista();
+    criarLista(tarefa); // Passa o titulo que pegou do input para a funcão criar lista
     localStorage.setItem("lista", JSON.stringify(listaTarefas));
   }
 }
 
-function criarLista() {
+function criarLista(tarefa) {
   const tarefas = document.getElementById("tarefas");
-  const tarefa = document.getElementById("tarefa").value;
   const ul = document.createElement("ul");
   const li = document.createElement("li");
 
@@ -27,6 +26,8 @@ function criarLista() {
 
   concluir.addEventListener("click", () => {
     li.classList.toggle("roxo");
+    if (concluir.textContent === "Concluir") concluir.textContent = "Voltar";
+    else concluir.textContent = "Concluir";
   });
 }
 
@@ -39,7 +40,10 @@ let listaTarefasLocalStorage = localStorage.getItem("lista");
 
 if (listaTarefasLocalStorage) {
   listaTarefas = JSON.parse(listaTarefasLocalStorage);
-  criarLista();
+  // Passa o titulo para o criar lista
+  listaTarefas.forEach((item) => {
+    criarLista(item);
+  });
 }
 
 function removerTarefas() {
