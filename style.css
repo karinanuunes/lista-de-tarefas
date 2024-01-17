@@ -63,11 +63,12 @@ button {
 #concluir {
   font-size: 9px;
   border: none;
-  padding: 2px 5px;
+  padding: 4px 5px;
 }
 
 ul {
   display: flex;
+  align-items: center;
 }
 
 .roxo {
